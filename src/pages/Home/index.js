@@ -7,7 +7,7 @@ const App = ({user}) => {
   const [cart, setCart] = useState([])
 
   useEffect( () => {
-      fetch("http://localhost:3000/api/products")
+      fetch("https://www.delilahresto.gq/api/products")
       .then(res => res.json())
       .then(data => setProducts(data.products))
   }, [products])
