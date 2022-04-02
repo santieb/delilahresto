@@ -10,7 +10,7 @@ const login = async ({ email, password }) => {
   }
   
   try{
-  const res = await fetch('http://localhost:3000/api/login', requestOptions)
+  const res = await fetch('https://www.delilahresto.gq/api/login', requestOptions)
   const userData = await res.json();
   return userData
 
