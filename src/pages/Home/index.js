@@ -7,7 +7,12 @@ const App = ({user}) => {
   const [cart, setCart] = useState([])
 
   useEffect( () => {
-      fetch("https://www.delilahresto.gq/api/products")
+      fetch("https://www.delilahresto.gq/api/products", {
+        'mode': 'cors',
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        }
+      })
       .then(res => res.json())
       .then(data => setProducts(data.products))
   }, [products])
