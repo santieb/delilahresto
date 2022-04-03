@@ -13,7 +13,9 @@ const App = ({user}) => {
             'Access-Control-Allow-Origin': '*',
         }
       })
-      .then(res => res.json())
+      .then(res => {
+        console.log(res.json())
+        res.json()})
       .then(data => setProducts(data.products))
   }, [products])
 
