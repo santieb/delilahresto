@@ -27,7 +27,6 @@ const Profile = () => {
       const loggedUser = window.localStorage.getItem('loggedUser')
       const token = JSON.parse(loggedUser).token
 
-      console.log(address)
       const newUserData = {
         name: name ? name : userData.name,
         username: username ? username : userData.username,

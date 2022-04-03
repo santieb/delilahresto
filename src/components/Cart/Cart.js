@@ -98,7 +98,7 @@ const Cart = ({cart, setCart}) => {
                 height: 30,
               }}
               options={{
-                clientId: "AeDK6G-jcyQHO4v0TLYBloQ1_h7Q0Mpofa-C8pQIMy3SPKID6csnRidINmfp-lDF483BlyDMB47IwhrR",
+                clientId: process.env.REACT_APP_PAYPAL_CLIENT_ID,
                 currency: "USD",
               }}
               amount={calculatePriceTotal()}

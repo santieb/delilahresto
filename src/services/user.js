@@ -9,7 +9,7 @@ const getUser = async (token) => {
   }
 
   try{
-    const res = await fetch('http://localhost:3000/api/user/me', requestOptions)
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/user/me`, requestOptions)
     const userData = await res.json();
     return userData
   } catch (err) {

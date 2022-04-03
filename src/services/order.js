@@ -15,7 +15,7 @@ const createOrder = async (token, order, shippingAddress, methodOfPayment) => {
   }
 
   try {
-  const res = await fetch('http://localhost:3000/api/orders', requestOptions)
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/orders`, requestOptions)
 
   const data = await res.json();
   return data
@@ -35,7 +35,7 @@ const getHistory = async (token) => {
   }
 
   try {
-  const res = await fetch('http://localhost:3000/api/orders/history', requestOptions)
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/orders/history`, requestOptions)
   const data = await res.json();
   return data
 
@@ -54,7 +54,7 @@ const confirmOrder = async (token) => {
   }
 
   try {
-  const res = await fetch('http://localhost:3000/api/orders/confirmation', requestOptions)
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/orders/confirmation`, requestOptions)
 
   const data = await res.json();
   return data
@@ -74,7 +74,7 @@ const cancellationOrder = async (token) => {
   }
 
   try {
-  const res = await fetch('http://localhost:3000/api/orders/cancellation', requestOptions)
+  const res = await fetch(`${process.env.REACT_APP_API_URL}/orders/cancellation`, requestOptions)
 
   const data = await res.json();
   return data

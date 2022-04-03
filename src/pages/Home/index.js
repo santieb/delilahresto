@@ -7,7 +7,7 @@ const App = ({user}) => {
   const [cart, setCart] = useState([])
 
   useEffect( () => {
-      fetch("https://www.delilahresto.gq/api/products", {
+      fetch(`${process.env.REACT_APP_API_URL}/products`, {
         'mode': 'cors',
         'headers': {
             'Access-Control-Allow-Origin': '*',
