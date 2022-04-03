@@ -14,9 +14,9 @@ const App = () => {
 
       if(url.includes('token')) {
       try {
-        const aux = url.replace("http://localhost:3001/?token=", "")
+        const aux = url.replace(`${process.env.REACT_APP_API_URL}/?token=`, "")
         const token = aux.replace("#_=_", "")
-          
+
         const userData = await getUser(token)
         const user = {
           user: {
