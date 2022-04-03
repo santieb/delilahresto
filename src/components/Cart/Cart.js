@@ -118,8 +118,13 @@ const Cart = ({cart, setCart}) => {
                   const loggedUser = localStorage.getItem('loggedUser')
                   if (!loggedUser) window.location.href = "/";
                   const token = JSON.parse(loggedUser).token
+                  
+                  let address1 = address
+                  if(typeof(address) === 'object') {
+                    address1 = address.address
+                  }
 
-                  const res = await createOrder(token, cart, address, "Paypal")
+                  const res = await createOrder(token, cart, address1, "Paypal")
                   if (res.status === 404) {
                     
                     alert(res.message)
@@ -139,4 +144,5 @@ const Cart = ({cart, setCart}) => {
     </>
   )
 }
+
 export default Cart
