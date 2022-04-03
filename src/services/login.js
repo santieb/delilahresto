@@ -14,6 +14,7 @@ const login = async ({ email, password }) => {
   try{
   const res = await fetch(`${process.env.REACT_APP_API_URL}/login`, requestOptions)
   const userData = await res.json();
+  console.log(userData)
   return userData
 
   } catch (err) {
