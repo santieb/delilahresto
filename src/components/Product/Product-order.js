@@ -3,17 +3,19 @@ import React  from 'react'
 const Product = ({ product, products, cart, setCart }) => {
   const { name, price, amount, imgURL } = product
 
-  const quantityIsEmpty = () => {
+  const updateCart = () => {
     const newCart = cart.filter(products => products.amount !== 0)
     setCart(newCart)
   }
 
-  const addProduct = (name) => cart.map(products => products.name === name ? products.amount++ : products)
+  const addProduct = (name) => {
+    cart.map(products => products.name === name ? products.amount++ : products)
+    updateCart()
+  }
 
   const subtractProduct = (name) => {
     cart.map(products => products.name === name ? products.amount-- : products)
-    
-    quantityIsEmpty()
+    updateCart()
   }
 
   return (
