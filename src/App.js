@@ -16,7 +16,7 @@ const App = () => {
       try {
         const aux = url.replace(`${process.env.REACT_APP_API_URL}/?token=`, "")
         const token = aux.replace("#_=_", "")
-
+        console.log(token)
         const userData = await getUser(token)
         const user = {
           user: {
