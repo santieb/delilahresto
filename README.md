@@ -1,21 +1,21 @@
-## Cómo usarlo?
+# React - restaurant
 
-### Clonar
+> Include:
+> + Login with validation form.
+> + Quick login with Google, Facebook, github and linkedin.
+> + Update personal information
+> + Create an order and modify it.
+> + Simulate a payment with PayPal.
 
-```bash
-$ git clone https://github.com/santieb/delilahresto.git
-$ cd delilahresto
-```
+## Demo: https://delilahreesto.herokuapp.com/
 
-### Instalar
+## Back end: https://github.com/santieb/delilahresto-api
 
-```bash
-$ npm install
-```
+## Author: Santieb
 
-### Ejecutar
+## Install dependencies
+### ---> `npm install`
 
-```bash
-$ npm run start
-```
-https://delilahreesto.herokuapp.com
+## Run
+### `npm run start`
+
