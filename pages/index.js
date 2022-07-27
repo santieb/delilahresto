@@ -5,6 +5,7 @@ import Cart from '../components/Cart'
 
 export default function Home () {
   const { products } = useDelilah()
+
   return (
     <Layout>
       <div className="flex m-auto py-6 justify-center px-12">

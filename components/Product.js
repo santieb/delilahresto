@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import useDelilah from '../hooks/useDelilah'
 
 const Product = ({ product }) => {
-  const { name, price, description, imgURL } = product
+  const { _id, name, price, description, imgURL } = product
+
+  const { addProduct } = useDelilah()
 
   return (
     <div className="w-64 bg-white rounded-lg border shadow-md">
@@ -13,7 +16,7 @@ const Product = ({ product }) => {
             <h1 className="text-2xl font-extrabold tracking-tightl">
                 ${price}
             </h1>
-            <button type="button" className="w-10 h-10 text-base font-medium rounded-full text-white bg-yellow-400 hover:bg-yellow-700">
+            <button onClick={() => addProduct(_id)} type="button" className="w-10 h-10 text-base font-medium rounded-full text-white bg-yellow-400 hover:bg-yellow-700">
               +
             </button>
         </div>
