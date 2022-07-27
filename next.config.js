@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['i.imgur.com']
   },
   env: {
-    backendUrl: 'https://delilahresto-api-production.up.railway.app/api/',
+    backendUrl: 'https://delilahresto-api-production.up.railway.app/api/'
   }
 }
 

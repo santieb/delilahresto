@@ -1,6 +1,6 @@
+import clientAxios from '../config/axios'
 import { useState, useEffect, createContext } from 'react'
 const DelilahContext = createContext()
-import clientAxios from '../config/axios'
 
 const DelilahProvider = ({ children }) => {
   const [products, setProducts] = useState([])
@@ -27,16 +27,24 @@ const DelilahProvider = ({ children }) => {
 
       const product = products.filter(product => product._id === id)
 
+      product[0].amount = 1
       setCart([...cart, ...product])
     } catch (err) {
       console.log(err)
     }
   }
 
+  const checkCart = () => {
+    const newCart = cart.filter(products => products.amount !== 0)
+    setCart(newCart)
+  }
+
   return (
     <DelilahContext.Provider value={{
       products,
-      addProduct
+      addProduct,
+      cart,
+      checkCart
     }}>
       {children}
     </DelilahContext.Provider>
